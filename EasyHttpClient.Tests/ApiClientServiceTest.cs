@@ -6,7 +6,7 @@ using EasyHttpClient;
 public class ApiClientServiceTest
 {
     [Fact]
-    public async Task GetAsync_DeveRetornarListaVazia_QuandoJsonForInvalido()
+    public async Task GetAsync_DeveRetornar_Objeto()
     {
         // Arrange
         var jsonValido = """
