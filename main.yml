@@ -1,0 +1,33 @@
+﻿name: Build & Publish NuGet Package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@main
+
+    - name: Instalar .NET SDK
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: Restaurar dependências
+      run: dotnet restore
+
+    - name: Compilar projeto
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Rodar testes
+      run: dotnet test ./tests/EasyHttpClient.Tests/EasyHttpClient.Tests.csproj --no-build --verbosity normal
+
+    - name: Empacotar para NuGet
+      run: dotnet pack ./src/EasyHttpClient/EasyHttpClient.csproj --configuration Release --output ./nupkgs
+
+    - name: Publicar no NuGet
+      run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}

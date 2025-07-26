@@ -4,6 +4,17 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+	<!-- Metadados do pacote NuGet -->
+	<PackageId>EasyHttpClient</PackageId>
+	<Version>1.0.0</Version>
+	<Authors>Pedro Oliveira</Authors>
+	<Description>Cliente HTTP genérico com suporte a deserialização automática para listas tipadas.</Description>
+	<PackageTags>http;httpclient;dotnet;nuget;json</PackageTags>
+	<RepositoryUrl>https://github.com/pedroolivy/EasyHttpClient</RepositoryUrl>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/pedroolivy/EasyHttpClient</PackageProjectUrl>
+
   </PropertyGroup>
 
   <ItemGroup>

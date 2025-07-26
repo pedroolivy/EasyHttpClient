@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -10,6 +10,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4CF02ED9-CF33-47D2-93F0-ADDEC0486F48}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyHttpClient.Tests", "EasyHttpClient.Tests\EasyHttpClient.Tests.csproj", "{044D37CB-1433-4F1F-908A-19C12991F133}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{D9092586-6312-4248-89F7-3AF0888CEC8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{6B999C5B-9E2F-4F9F-A0B6-CE33BF341497}"
+	ProjectSection(SolutionItems) = preProject
+		main.yml = main.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +39,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3A6E9DE6-12F9-47F7-A6AA-A29DF291EE6A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{044D37CB-1433-4F1F-908A-19C12991F133} = {4CF02ED9-CF33-47D2-93F0-ADDEC0486F48}
+		{6B999C5B-9E2F-4F9F-A0B6-CE33BF341497} = {D9092586-6312-4248-89F7-3AF0888CEC8C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {458E6A84-F7CE-4D81-9610-427626F22CA1}
