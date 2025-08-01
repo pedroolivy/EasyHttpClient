@@ -24,10 +24,10 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Rodar testes
-      run: dotnet test ./tests/EasyHttpClient.Tests/EasyHttpClient.Tests.csproj --no-build --verbosity normal
+      run: dotnet test ./EasyHttpClient.Tests/EasyHttpClient.Tests.csproj --no-build --verbosity normal
 
     - name: Empacotar para NuGet
-      run: dotnet pack ./src/EasyHttpClient/EasyHttpClient.csproj --configuration Release --output ./nupkgs
+      run: dotnet pack ./EasyHttpClient/EasyHttpClient.csproj --configuration Release --output ./nupkgs
 
     - name: Publicar no NuGet
       run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}
