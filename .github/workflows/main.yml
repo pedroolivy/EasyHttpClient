@@ -24,7 +24,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Rodar testes
-      run: dotnet test ./EasyHttpClient.Tests/EasyHttpClient.Tests.csproj --no-build --verbosity normal
+      run: dotnet test --configuration Release --no-build
 
     - name: Empacotar para NuGet
       run: dotnet pack ./EasyHttpClient/EasyHttpClient.csproj --configuration Release --output ./nupkgs
