@@ -12,7 +12,7 @@ namespace EasyHttpClient
         {
             _httpClient = httpClientFactory.CreateClient();
             _jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-        }
+        } 
 
         public async Task<List<T>> GetAsync(string url, CancellationToken cancellationToken = default)
         {
