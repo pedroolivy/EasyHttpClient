@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v4
 
-    - name: Instalar .NET SDK
-      uses: actions/setup-dotnet@v2
+    - name: Instalar .NET SDK 9
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '9.0.x'
+        dotnet-version: '9.0.x' # seu projeto tá no 9? então beleza!
 
     - name: Restaurar dependências
       run: dotnet restore
@@ -31,4 +31,3 @@ jobs:
 
     - name: Publicar no NuGet
       run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}
-
