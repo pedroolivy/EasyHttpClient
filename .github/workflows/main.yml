@@ -30,4 +30,5 @@ jobs:
       run: dotnet pack ./EasyHttpClient/EasyHttpClient.csproj --configuration Release --output ./nupkgs
 
     - name: Publicar no NuGet
-      run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v2/index.json --api-key ${{ secrets.NUGET_TOKEN }}
+      run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+
